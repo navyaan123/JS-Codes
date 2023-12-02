@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+</head>
+<body>
+
+<h1>TODO List App</h1>
+
+<button id="task_name" onclick="form1()">Add Task</button>
+
+<form id="fom" onsubmit="task_func('task','priority');return false">
+    <h1>My Todo's</h1>
+    <label>TaskName: </label>
+    <input id="task" type="text"> <br><br>
+
+    <label>Priority</label>
+    <select id="priority">
+    
+    <option  value="high">high</option>
+    <option value="medium">medium</option>
+    <option value="low">low</option>
+    </select><br><br>
+     <input type="submit" />
+
+</form>
+
+
+
+<table id="tab" border="1">
+<tr>
+<th>#</th>
+<th>Task Name</th>
+<th>Priority</th>
+<th>Status</th>
+<th>Edit</th>
+<th>Remove</th>
+</tr>
+
+<tr>
+    <td id="num0"></td>
+    <td id="t0"> </td>
+    <td id="pri0"> </td>
+    <td><input id="check0" type="checkbox" /></td>
+    <td><button><img class="image_edit" onclick="edit_form(0)" src="./images/editimage.png"></button></td>
+    <td><button onclick="remove(0)"><img class="image_remove"class="image_remove"src="./images/removeimage.jpg"></button></td>
+</tr>
+<tr>
+    <td id="num1"></td>
+    <td id="t1"> </td>
+    <td id="pri1"> </td>
+    <td><input id="check1" type="checkbox" /></td>
+    <td><button><img class="image_edit" onclick="edit_form(1)" src="./images/editimage.png"></button></td>
+    <td><button onclick="remove(1)"><img class="image_remove" class="image_remove" src="./images/removeimage.jpg"></button></td>
+</tr>
+
+<tr>
+    <td id="num2"></td>
+    <td id="t2"> </td>
+    <td id="pri2"> </td>
+    <td><input id="check2" type="checkbox" /></td>
+    <td><button><img class="image_edit" onclick="edit_form(2)" src="./images/editimage.png"></button></td>
+    <td><button onclick="remove(2)"><img class="image_remove" class="image_remove" src="./images/removeimage.jpg"></button></td>
+    </tr>
+</tr>
+
+ <tr>
+    <td id="num3"></td>
+    <td id="t3"> </td>
+    <td id="pri3"> </td>
+    <td><input id="check3" type="checkbox" /></td>
+    <td><button><img class="image_edit" onclick="edit_form(3)" src="./images/editimage.png"></button></td>
+    <td><button onclick="remove(3)"><img class="image_remove" class="image_remove" src="./images/removeimage.jpg"></button></td>
+</tr>
+
+<tr>
+    <td id="num4"></td>
+    <td id="t4"> </td>
+    <td id="pri4"> </td>
+    <td><input type="checkbox" /></td>
+    <td><button id="check4"><img class="image_edit" onclick="edit_form(4)" src="./images/editimage.png"></button></td>
+    <td><button onclick="remove(4)"><img class="image_remove" class="image_remove" src="./images/removeimage.jpg"></button></td>
+</tr>
+<tr>
+        <td id="num5"></td>
+        <td id="t5"> </td>
+        <td id="pri5"> </td>
+        <td><input id="check5" type="checkbox" /></td>
+        <td><button><img class="image_edit" onclick="edit_form(5)" src="./images/editimage.png"></button></td>
+        <td><button onclick="remove(5)"><img class="image_remove" class="image_remove" src="./images/removeimage.jpg"></button></td>
+
+<tr>
+    <td id="num6"></td>
+    <td id="t6"> </td>
+    <td id="pri6"> </td>
+    <td><input id="check6" type="checkbox" /></td>
+    <td><button><img class="image_edit" onclick="edit_form(6)" src="./images/editimage.png"></button></td>
+    <td><button onclick="remove(6)"><img class="image_remove" class="image_remove" src="./images/removeimage.jpg"></button></td>
+
+</tr>
+<tr>
+    <td id="num7"></td>
+    <td id="t7"> </td>
+    <td id="pri7"> </td>
+    <td><input id="check7" type="checkbox" /></td>
+    <td><button><img class="image_edit" onclick="edit_form(7)" src="./images/editimage.png"></button></td>
+    <td><button onclick="remove(7)"><img class="image_remove" class="image_remove" src="./images/removeimage.jpg"></button></td>
+
+<tr>
+    <td id="num8"></td>
+    <td id="t8"> </td>
+    <td id="pri8"> </td>
+    <td><input type="checkbox" /></td>
+    <td><button id="check8"><img class="image_edit" onclick="edit_form(8)" src="./images/editimage.png"></button></td>
+    <td><button onclick="remove(8)"><img class="image_remove" class="image_remove" src="./images/removeimage.jpg"></button></td>
+
+</tr>
+<tr>
+    <td id="num9"></td>
+    <td id="t9"> </td>
+    <td id="pri9"> </td>
+    <td><input id="check9" type="checkbox" /></td>
+    <td><button><img class="image_edit" onclick="edit_form(9)" src="./images/editimage.png"></button></td>
+    <td><button onclick="remove(9)"><img class="image_remove" class="image_remove" src="./images/removeimage.jpg"></button></td>
+
+</tr>
+
+
+
+</tr>
+</table>
+
+
+
+<form id="edit_fom">
+<h1>Edit Form</h1>
+
+    <h1>My Todo's</h1>
+
+    <label>Id: </label>
+    <input id="id0" type="text"> <br><br>
+
+
+
+    <label>Task Name: </label>
+    <input id="edt0" type="text"> <br><br>
+
+        <label>Priority</label>
+        <select id="prior">
+        
+            <option value="high">high</option>
+            <option value="medium">medium</option>
+            <option value="low">low</option>
+        </select><br><br>
+        <input type="button" value="update" onclick="update(id0.value,edt0.value,prior.value)"/>
+
+
+</body>
+<script src="todo.js"></script>
+<link rel="stylesheet" href="todo.css">
+</html>
